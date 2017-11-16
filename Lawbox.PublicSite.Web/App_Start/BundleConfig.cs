@@ -1,7 +1,6 @@
-﻿using System.Web;
-using System.Web.Optimization;
+﻿using System.Web.Optimization;
 
-namespace Lawbox.PublicSite
+namespace Lawbox.PublicSite.Web
 {
     public class BundleConfig
     {
