@@ -1,26 +1,32 @@
-﻿using System.Web.Mvc;
+﻿using System.Linq;
+using System.Web.Mvc;
+using Lawbox.PublicSite.Web.Extensions;
+using Voxteneo.Core.Attributes;
+using Voxteneo.Core.Mvc;
 
 namespace Lawbox.PublicSite.Web.Controllers
 {
-    public class HomeController : Controller
+    [Inject]
+    public class DpBaseController : VxControllerBase
     {
-        public ActionResult Index()
+
+        public DpBaseController() : base()
         {
-            return View();
         }
 
-        public ActionResult About()
+        protected void TransalteModelError()
         {
-            ViewBag.Message = "Your application description page.";
+            foreach (var modelStateValue in ModelState.Values)
+            {
+                var errors = modelStateValue.Errors.ToList();
+                modelStateValue.Errors.Clear();
+                foreach (var error in errors)
+                {
+                    modelStateValue.Errors.Add(DictionaryExtenssion.GetDictionary(error.ErrorMessage));
+                }
 
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            }
         }
     }
+   
 }
