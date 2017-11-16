@@ -40,20 +40,20 @@ Umbraco/App_Data/Logs/*.*
 Umbraco/App_Data/Logs/*.*
 Umbraco/App_Data/TEMP/
 Umbraco/App_Data/TEMP/*/*.*
-DpbSite.Web/tmp/*.cache
+Lawbox.PublicSite/tmp/*.cache
 
 #Specific DpbSite
 
 #TEMP
-DpbSite.Web/App_Data/TEMP/*/*.*
-DpbSite.Web/App_Data/TEMP/*/*.*
-DpbSite.Web/App_Data/TEMP/*/*/*.*
-DpbSite.Web/App_Data/TEMP/*/*/*/*.*
-DpbSite.Web/App_Data/Logs/*.*
-DpbSite.Web/App_Data/TEMP/*/*/*
-DpbSite.Web/App_Data/NuGetBackup/*/*/*.*
-DpbSite.Web/App_Data/NuGetBackup/*/*/*/*.*
-DpbSite.Web/Images/*.*
+Lawbox.PublicSite/App_Data/TEMP/*/*.*
+Lawbox.PublicSite/App_Data/TEMP/*/*.*
+Lawbox.PublicSite/App_Data/TEMP/*/*/*.*
+Lawbox.PublicSite/App_Data/TEMP/*/*/*/*.*
+Lawbox.PublicSite/App_Data/Logs/*.*
+Lawbox.PublicSite/App_Data/TEMP/*/*/*
+Lawbox.PublicSite/App_Data/NuGetBackup/*/*/*.*
+Lawbox.PublicSite/App_Data/NuGetBackup/*/*/*/*.*
+Lawbox.PublicSite/Images/*.*
 
 #Config
 DpbSite.Api/app.config
@@ -63,16 +63,16 @@ DpbSite.Entities/app.config
 DpbSite.EntityFramework/app.config
 DpbSite.Service/app.config
 DpbSite.Entities/App.config
-DpbSite.Web/Web.config
-DpbSite.Web/Web.Debug.config
-DpbSite.Web/Web.Release.config
+Lawbox.PublicSite/Web.config
+Lawbox.PublicSite/Web.Debug.config
+Lawbox.PublicSite/Web.Release.config
 SqlScripts/SqlDBVersionningTool.exe.config
 
 #Node Modules (FE Things)
-DpbSite.Web/node_modules/
+Lawbox.PublicSite/node_modules/
 
 #Sass
-DpbSite.Web/.sass-cache/
+Lawbox.PublicSite/.sass-cache/
 
 
-DpbSite.Web/Web.*.config
+Lawbox.PublicSite/Web.*.config
