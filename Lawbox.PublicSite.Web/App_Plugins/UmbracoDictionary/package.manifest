@@ -1,0 +1,26 @@
+{
+    //you can define multiple editors
+    propertyEditors: [
+        {
+            /*this must be a unique alias*/
+            alias: "Voxteneo.UseDictionary",
+            /*the name*/
+            name: "Use Dictionary",
+            /*the icon*/
+            icon: "icon-code",
+            /*grouping for "Select editor" dialog*/
+            group: "Common",
+            /*the HTML file we will load for the editor*/
+            editor: {
+                view: "~/umbraco/lib/umbraco-dictionary/template.html"
+            }
+        }
+    ]
+    ,
+    //array of files we want to inject into the application on app_start
+    javascript: [				
+	
+		'~/umbraco/lib/tinymce/tinymce.min.js',		
+        '~/umbraco/lib/umbraco-dictionary/controller.js'
+    ]
+}

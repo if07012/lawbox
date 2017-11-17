@@ -1,0 +1,44 @@
+<div ng-controller='voxteneo.useDictionary'>
+    <div ng-if="isLoading">Please Wait</div>
+    <div class="container"ng-if="!isLoading" >        
+        <select ng-model="model.value" ng-value="model.value">
+            <option ng-value="item.key" ng-repeat="item in list">{{item.key}}</option>
+        </select>
+        <div ng-if="isEdit">
+            <div>
+                <textarea tinymce  data="item.value"></textarea>                
+            </div>
+            <br/>
+            <div>
+                <button type="button" class="btn umb-button__button btn-info umb-button--" ng-click="cancel(item)">
+                    Cancel
+                </button>
+                <button type="button" class="btn umb-button__button btn-success umb-button--" ng-click="action(item)">
+                    Save
+                </button>
+            </div>
+        </div>
+        <table style="width:100%" ng-if="!isEdit">
+            <tr>
+                <th>
+                    Culture
+                </th>
+                <th>
+                </th>
+                <th>
+                </th>
+            </tr>
+            <tr ng-repeat="item in listCountry">
+                <td>{{item.culture}} </td>
+                <td>
+                    <i ng-if="item.isAvailable" class="icon-check"></i>
+					<i ng-if="!item.isAvailable" class="icon-delete"></i>
+                </td>
+                <td>
+                    <a ng-click="edit(item)">Edit</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</div>
